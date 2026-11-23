@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HealthyFood Market</title>
+  <meta name="theme-color" content="#1f9d55" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">HF</div>
+      <div>
+        <div class="brand-title">HealthyFood Market</div>
+        <div class="brand-sub">Bio • Dietike • Suplemente</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <input id="search" class="search" placeholder="Kërko produkt..." />
+      <button id="openCart" class="btn">Shporta (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <select id="dietFilter" class="select">
+        <option value="">Dietë: të gjitha</option>
+        <option value="vegan">Vegan</option>
+        <option value="gluten-free">Pa gluten</option>
+        <option value="keto">Keto</option>
+      </select>
+      <select id="categoryFilter" class="select">
+        <option value="">Kategori: të gjitha</option>
+        <option value="bio">Bio</option>
+        <option value="dietike">Dietike</option>
+      </select>
+      <button id="resetFilters" class="btn btn-ghost">Reset</button>
+    </section>
+
+    <section class="grid" id="grid"></section>
+
+    <section class="panel">
+      <h2>AI Assistant (demo)</h2>
+      <div class="chat">
+        <div id="chatLog" class="chat-log"></div>
+        <div class="chat-row">
+          <input id="chatInput" class="chat-input" placeholder="Shkruaj: 'keto', 'pa gluten', 'vegan', 'alergjenë'..." />
+          <button id="chatSend" class="btn">Dërgo</button>
+        </div>
+      </div>
+      <p class="muted">Ky është demo (rregulla të thjeshta) për të treguar integrimin e AI në platformë.</p>
+    </section>
+  </main>
+
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Shporta</h2>
+        <button id="closeCart" class="btn btn-ghost">Mbyll</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total">Total: <b><span id="cartTotal">0.00</span> €</b></div>
+
+      <h3>Checkout</h3>
+      <div class="checkout">
+        <input id="name" class="input" placeholder="Emri Mbiemri" />
+        <input id="phone" class="input" placeholder="Nr. telefoni" />
+        <input id="address" class="input" placeholder="Adresa" />
+        <select id="payment" class="select">
+          <option value="cash_on_delivery">Cash on Delivery</option>
+          <option value="card_demo">Kartë (demo)</option>
+        </select>
+        <button id="placeOrder" class="btn btn-primary">Porosit</button>
+        <div id="orderResult" class="order-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").catch(()=>{});
+    }
+  </script>
+</body>
+</html>

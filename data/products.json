@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Granola Bio",
+    "category": "bio",
+    "diet": [
+      "vegan"
+    ],
+    "price": 6.5,
+    "unit": "400g",
+    "tags": [
+      "high-fiber"
+    ],
+    "ingredients": "Tërshërë, fara, fruta të thata.",
+    "allergens": "Mund të përmbajë arra.",
+    "nutrition": {
+      "kcal": 420
+    }
+  },
+  {
+    "id": 2,
+    "name": "Pasta Pa Gluten",
+    "category": "dietike",
+    "diet": [
+      "gluten-free"
+    ],
+    "price": 3.2,
+    "unit": "500g",
+    "tags": [
+      "gluten-free"
+    ],
+    "ingredients": "Miell misri, miell orizi.",
+    "allergens": "Pa gluten.",
+    "nutrition": {
+      "kcal": 350
+    }
+  },
+  {
+    "id": 3,
+    "name": "Gjalp Kikiriku Bio",
+    "category": "bio",
+    "diet": [
+      "vegan"
+    ],
+    "price": 5.9,
+    "unit": "300g",
+    "tags": [
+      "protein"
+    ],
+    "ingredients": "Kikirikë 100%.",
+    "allergens": "Kikirikë.",
+    "nutrition": {
+      "kcal": 590
+    }
+  },
+  {
+    "id": 4,
+    "name": "Protein Bar Keto",
+    "category": "dietike",
+    "diet": [
+      "keto"
+    ],
+    "price": 2.4,
+    "unit": "60g",
+    "tags": [
+      "low-carb"
+    ],
+    "ingredients": "Proteina, fibra, kakao.",
+    "allergens": "Mund të përmbajë qumësht.",
+    "nutrition": {
+      "kcal": 210
+    }
+  }
+]
